@@ -1,0 +1,24 @@
+{
+    "name": "essential-event-management/event-system",
+    "version": "1.0.0",
+    "type": "wordpress-plugin",
+   
+    "require": {
+      
+      "composer/installers": "~1.0",
+          "halaxa/json-machine": "^0.3.2",
+        "maxakawizard/json-collection-parser": "~1.0",
+        "salsify/json-streaming-parser": "^8.1"
+       
+                
+    },
+    "autoload": {
+      
+        "psr-4": {"Redeye\\": "src/"},
+        "classmap": ["src/"],
+        "files": [
+          
+                           
+       ]
+    }
+  }
