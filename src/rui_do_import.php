@@ -11,20 +11,23 @@ Class rui_do_import{
             return;
 
           }
-          $this->import();
-         
-          
 
+         
+         $this->import();
+          wp_redirect( home_url() );
+          exit();
+           
    }
 
    public function import(){
-
+         $tables = isset($_POST['tables'])?$_POST['tables']:[];
          $parser = new \JsonCollectionParser\Parser();
-         $processor = new \RE_Import();
+         $processor = new \RE_Import($tables);
          $parser->parse(RUI_DIR.'/database.json', [$processor, 'process']);
          
          $processor->store();
-        
+         
+         
 
    }
 
