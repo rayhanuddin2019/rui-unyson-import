@@ -26,5 +26,6 @@ function redeye_init() {
 $do_import =  new rui_do_import();
 
 add_action('admin_init',[$do_import,'init']);
+add_action('admin_init',[$do_import,'upload']);
 
 
